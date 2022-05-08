@@ -57,7 +57,7 @@ jobs:
         TEAM_ID: ${{ secrets.TEAM_ID }}
       run: |
         cd ${{env.PROJECT_NAME}}/scripts
-        ./makedist-mac.sh
+        sh ./makedist-mac.sh
       shell: bash
 
     - name: Add msbuild to PATH (Windows)
