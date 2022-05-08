@@ -9,3 +9,9 @@ build-*
 */.vs
 *.pem
 mkcert*
+
+# Tests
+*/results-*/*
+
+# Exceptions
+!.gitkeep
