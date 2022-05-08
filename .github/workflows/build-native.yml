@@ -41,11 +41,12 @@ jobs:
         ./download-prebuilt-libs.sh
       shell: bash
 
-    - name: Import Certificate
-        uses: apple-actions/import-codesign-certs@v1
-        with: 
-          p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
-          p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
+    - name: Import Certificate (macOS)
+      if: matrix.os == 'macOS-latest'
+      uses: apple-actions/import-codesign-certs@v1
+      with: 
+        p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
+        p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
 
     - name: Build macOS
       if: matrix.os == 'macOS-latest'
