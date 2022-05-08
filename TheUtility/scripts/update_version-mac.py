@@ -49,25 +49,6 @@ def main():
     with open(plistpath, 'wb') as f2:
       plistlib.dump(vst3, f2)
 
-# VST2
-
-  plistpath = projectpath + "/resources/" + config['BUNDLE_NAME'] + "-VST2-Info.plist"
-  with open(plistpath, 'rb') as f:
-    vst2 = plistlib.load(f)  
-    vst2['CFBundleExecutable'] = config['BUNDLE_NAME']
-    vst2['CFBundleGetInfoString'] = CFBundleGetInfoString
-    vst2['CFBundleIdentifier'] = config['BUNDLE_DOMAIN'] + "." + config['BUNDLE_MFR'] + ".vst." + config['BUNDLE_NAME'] + ""
-    vst2['CFBundleName'] = config['BUNDLE_NAME']
-    vst2['CFBundleVersion'] = CFBundleVersion
-    vst2['CFBundleShortVersionString'] = CFBundleVersion
-    vst2['LSMinimumSystemVersion'] = LSMinimumSystemVersion
-    vst2['CFBundlePackageType'] = CFBundlePackageType
-    vst2['CFBundleSignature'] = config['PLUG_UNIQUE_ID']
-    vst2['CSResourcesFileMapped'] = CSResourcesFileMapped
-
-    with open(plistpath, 'wb') as f2:
-      plistlib.dump(vst2, f2)
-
 # AUDIOUNIT v2
 
   plistpath = projectpath + "/resources/" + config['BUNDLE_NAME'] + "-AU-Info.plist"
@@ -152,47 +133,6 @@ def main():
 
     with open(plistpath, 'wb') as f2:
       plistlib.dump(auv3, f2)
-
-# AAX
-
-  plistpath = projectpath + "/resources/" + config['BUNDLE_NAME'] + "-AAX-Info.plist"
-  with open(plistpath, 'rb') as f:
-    aax = plistlib.load(f)  
-    aax['CFBundleExecutable'] = config['BUNDLE_NAME']
-    aax['CFBundleGetInfoString'] = CFBundleGetInfoString
-    aax['CFBundleIdentifier'] = config['BUNDLE_DOMAIN'] + "." + config['BUNDLE_MFR'] + ".aax." + config['BUNDLE_NAME'] + ""
-    aax['CFBundleName'] = config['BUNDLE_NAME']
-    aax['CFBundleVersion'] = CFBundleVersion
-    aax['CFBundleShortVersionString'] = CFBundleVersion
-    aax['LSMinimumSystemVersion'] = LSMinimumSystemVersion
-    aax['CSResourcesFileMapped'] = CSResourcesFileMapped
-
-    with open(plistpath, 'wb') as f2:
-      plistlib.dump(aax, f2)
-
-# APP
-
-  plistpath = projectpath + "/resources/" + config['BUNDLE_NAME'] + "-macOS-Info.plist"
-
-  with open(plistpath, 'rb') as f:
-    macOSapp = plistlib.load(f)
-    macOSapp['CFBundleExecutable'] = config['BUNDLE_NAME']
-    macOSapp['CFBundleGetInfoString'] = CFBundleGetInfoString
-    macOSapp['CFBundleIdentifier'] = config['BUNDLE_DOMAIN'] + "." + config['BUNDLE_MFR'] + ".app." + config['BUNDLE_NAME'] + ""
-    macOSapp['CFBundleName'] = config['BUNDLE_NAME']
-    macOSapp['CFBundleVersion'] = CFBundleVersion
-    macOSapp['CFBundleShortVersionString'] = CFBundleVersion
-    macOSapp['LSMinimumSystemVersion'] = LSMinimumSystemVersion
-    macOSapp['CFBundlePackageType'] = CFBundlePackageType
-    macOSapp['CFBundleSignature'] = config['PLUG_UNIQUE_ID']
-    macOSapp['CSResourcesFileMapped'] = CSResourcesFileMapped
-    macOSapp['NSPrincipalClass'] = "SWELLApplication"
-    macOSapp['NSMainNibFile'] = config['BUNDLE_NAME'] + "-macOS-MainMenu"
-    macOSapp['LSApplicationCategoryType'] = "public.app-category.music"
-    macOSapp['NSMicrophoneUsageDescription'] = 	"This app needs mic access to process audio."
-
-    with open(plistpath, 'wb') as f2:
-      plistlib.dump(macOSapp, f2)
 
 if __name__ == '__main__':
   main()
