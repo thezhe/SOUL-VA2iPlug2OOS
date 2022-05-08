@@ -1,0 +1,35 @@
+namespace main
+{
+    //'effect' namespace definition
+    namespace effect = VA::HighLevel::TheChorus; 
+
+    graph Processor [[main]]
+    {
+        input stream VA::SampleType in;
+        output stream VA::SampleType out;
+
+        input
+        {
+            //'effect' endpoints
+            e.depthIn;
+            e.rateIn;
+            e.widthIn;
+    
+            e.delayIn;
+            e.modeIn; 
+            e.cutoffIn;
+            
+            e.mixIn;
+            e.panIn;
+            e.makeupIn;
+        }
+        
+        let e = effect::Processor;
+
+        connection
+        {       
+            in -> e.in;
+            e.out -> out;
+        }
+    }
+}

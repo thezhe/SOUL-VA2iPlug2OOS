@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>TheSplit</string>
+	<key>CFBundleGetInfoString</key>
+	<string>TheSplit v1.0.3 TheZhe 2022</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.TheZhe.app.TheSplit.AUv3</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>TheSplit</string>
+	<key>CFBundlePackageType</key>
+	<string>XPC!</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.3</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.3</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.12.0</string>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionAttributes</key>
+		<dict>
+			<key>AudioComponentBundle</key>
+			<string>com.AcmeInc.app.TheSplit.AUv3Framework</string>
+			<key>AudioComponents</key>
+			<array>
+				<dict>
+					<key>description</key>
+					<string>TheSplit</string>
+					<key>manufacturer</key>
+					<string>TZhe</string>
+					<key>name</key>
+					<string>TheZhe: TheSplit</string>
+					<key>sandboxSafe</key>
+					<true/>
+					<key>subtype</key>
+					<string>Gr3I</string>
+					<key>tags</key>
+					<array>
+						<string>Effects</string>
+					</array>
+					<key>type</key>
+					<string>aufx</string>
+					<key>version</key>
+					<integer>65539</integer>
+				</dict>
+			</array>
+		</dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.AudioUnit-UI</string>
+		<key>NSExtensionPrincipalClass</key>
+		<string>IPlugAUViewController</string>
+	</dict>
+</dict>
+</plist>

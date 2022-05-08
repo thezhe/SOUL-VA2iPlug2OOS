@@ -1,0 +1,39 @@
+namespace main
+{
+    //'effect' namespace definition
+    namespace effect = VA::HighLevel::TheUtility; 
+
+    graph Processor [[main]]
+    {
+        input stream VA::SampleType in, dryIn;
+        output stream VA::SampleType out;
+
+        input
+        {
+            //'effect' endpoints
+            e.complementIn;
+            e.invertL_In;
+            e.invertR_In;
+
+            e.volumeWetIn;
+            e.volumeDryIn;
+            e.mixIn;
+            e.AB_In;
+            e.volumeModeIn;
+
+            e.panWetIn;
+            e.panDryIn;
+            e.panModeMetaIn;
+            
+        }
+        
+        let e = effect::Processor;
+
+        connection
+        {       
+            in -> e.in;
+            dryIn -> e.dryIn;
+            e.out -> out;
+        }
+    }
+}

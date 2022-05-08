@@ -1,0 +1,39 @@
+namespace main
+{
+    //'effect' namespace definition
+    namespace effect = VA::HighLevel::TheExpressor; 
+
+    graph Processor [[main]]
+    {
+        input stream VA::SampleType in, scIn;
+        output stream VA::SampleType out, guiOut;
+
+        input
+        {
+            //'effect' endpoints
+            e.attackIn;
+            e.releaseIn;
+            e.thresholdIn;
+            e.ratioIn;
+            e.ratio1In;
+            e.makeupIn;
+
+            e.sidechainIn;
+            e.cutoffHP_In;
+            e.stereoLinkIn;
+            e.softnessIn;
+            e.colorIn;
+            e.mixIn;
+        }
+        
+        let e = effect::Processor;
+
+        connection
+        {       
+            in -> e.in;
+            scIn -> e.scIn;
+            e.out -> out;
+            e.guiOut -> guiOut;
+        }
+    }
+}

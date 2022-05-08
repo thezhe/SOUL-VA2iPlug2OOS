@@ -1,0 +1,16 @@
+{
+    "soulPatchV1": {
+        "ID": "com.TheZhe.TheUtilityDSP",
+        "version": "1.0",
+        "name": "TheUtilityDSP",
+        "description": "TheUtility DSP",
+        "category": "effect",
+        "manufacturer": "TheZhe",
+        "website": "https://github.com/thezhe/SOUL-VA",
+        "isInstrument": false,
+        "source": [
+            "DSP.soul",
+            "../SOUL-VA/include/VA.soul"
+        ]
+    }
+}

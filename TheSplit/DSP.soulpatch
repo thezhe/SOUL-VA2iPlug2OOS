@@ -1,0 +1,16 @@
+{
+    "soulPatchV1": {
+        "ID": "com.TheZhe.TheSplitDSP",
+        "version": "1.0",
+        "name": "TheSplitDSP",
+        "description": "TheSplit DSP",
+        "category": "effect",
+        "manufacturer": "TheZhe",
+        "website": "https://github.com/thezhe/SOUL-VA",
+        "isInstrument": false,
+        "source": [
+            "DSP.soul",
+            "../SOUL-VA/include/VA.soul"
+        ]
+    }
+}

@@ -12,6 +12,3 @@ mkcert*
 
 # Tests
 */results-*/*
-
-# Exceptions
-!.gitkeep

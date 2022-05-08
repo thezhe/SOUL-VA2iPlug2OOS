@@ -1,0 +1,37 @@
+namespace main
+{
+    //'effect' namespace definition
+    namespace effect = VA::HighLevel::TheSplit; 
+
+    graph Processor [[main]]
+    {
+        input stream VA::SampleType in;
+        output stream VA::SampleType out, out1;
+
+        input
+        {
+            //'effect' endpoints
+            e.modeIn;
+            e.flipIn;
+
+            e.frequencyIn;
+
+            e.attackIn;
+            e.sustainIn;
+            e.sensitivityIn;
+
+            e.thresholdIn;
+            e.releaseIn;
+            e.stereoLinkLsIn;
+        }
+
+        let e = effect::Processor;
+        
+        connection
+        {       
+            in -> e.in;
+            e.out -> out;
+            e.out1 -> out1;
+        }
+    }
+}

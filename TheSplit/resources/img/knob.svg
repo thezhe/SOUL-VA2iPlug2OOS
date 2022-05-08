@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="40mm"
+   height="40mm"
+   viewBox="0 0 40 40"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="knob.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="8"
+     inkscape:cx="56.0625"
+     inkscape:cy="32.8125"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:object-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-nodes="true"
+     inkscape:snap-bbox="false"
+     height="50mm"
+     inkscape:snap-intersection-paths="true" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="fill_between_many"
+       method="originald"
+       linkedpaths="#path3309,0,1"
+       id="path-effect3610" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-56.261696,-55.895935)">
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:1.02225;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path925"
+       cx="76.261696"
+       cy="75.895935"
+       r="17.988876" />
+    <path
+       id="path1197-4"
+       style="fill:none;stroke:#000000;stroke-width:0.662092;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 78.027601,56.130019 -1.774608,1.774615 -1.757211,1.757224 m 0,-3.531722 3.531819,3.531839"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+</svg>

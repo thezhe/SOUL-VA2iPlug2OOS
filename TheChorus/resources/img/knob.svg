@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="35mm"
+   height="35mm"
+   viewBox="0 0 35 35"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="knob.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="4.143375"
+     inkscape:cx="94.729538"
+     inkscape:cy="75.180258"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:object-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-nodes="true"
+     inkscape:snap-bbox="false"
+     height="50mm"
+     inkscape:snap-intersection-paths="true"
+     width="35mm" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="dashed_stroke"
+       id="path-effect2478"
+       is_visible="true"
+       lpeversion="1"
+       numberdashes="4"
+       holefactor="0"
+       splitsegments="true"
+       halfextreme="true"
+       unifysegment="true"
+       message="Add &lt;b&gt;&quot;Fill Between Many LPE&quot;&lt;/b&gt; to add fill." />
+    <inkscape:path-effect
+       effect="dashed_stroke"
+       id="path-effect2476"
+       is_visible="true"
+       lpeversion="1"
+       numberdashes="16"
+       holefactor="0"
+       splitsegments="true"
+       halfextreme="true"
+       unifysegment="true"
+       message="Add &lt;b&gt;&quot;Fill Between Many LPE&quot;&lt;/b&gt; to add fill." />
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path824" />
+    </marker>
+    <inkscape:path-effect
+       effect="fill_between_many"
+       method="originald"
+       linkedpaths="#path3309,0,1"
+       id="path-effect3610"
+       is_visible="true"
+       lpeversion="0"
+       join="true"
+       close="true"
+       autoreverse="true"
+       applied="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-56.261696,-55.895935)">
+    <path
+       id="path4749"
+       style="display:inline;opacity:1;stroke-width:0.875004;stroke-linejoin:round;stroke-opacity:0.498039;paint-order:stroke fill markers"
+       d="m 73.761702,55.895935 2.055072,1.893209 -2.055072,1.893848 -2.055034,-1.893848 z"
+       sodipodi:nodetypes="ccccc" />
+    <g
+       inkscape:label="Layer 1"
+       id="layer1-7"
+       transform="matrix(0.87500022,0,0,0.87501314,7.0327034,6.9862571)">
+      <circle
+         style="fill:none;stroke:#000000;stroke-width:1.02225;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path925-0"
+         cx="76.261696"
+         cy="75.895935"
+         r="17.988876" />
+    </g>
+  </g>
+</svg>

@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# This script initializes the cloned iPlug2OOS repo, downloading dependencies, and tools
+# This script updates submodules and dependencies
 
-echo "Initializing submodule..."
-git submodule update --init
+echo "Initializing submodules..."
+./update_container.sh
 
 echo "Downloading iPlug2 SDKs..."
 cd iPlug2/Dependencies/IPlug/
