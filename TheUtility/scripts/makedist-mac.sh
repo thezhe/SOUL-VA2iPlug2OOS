@@ -198,7 +198,7 @@ ls $BUILDDIR/zip
 echo "setting up signing"
 echo ""
 
-security find-identity -p codesigning
+security find-identity -v -p codesigning
 
 echo "signing..."
 echo ""

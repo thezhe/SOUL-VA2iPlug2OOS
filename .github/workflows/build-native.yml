@@ -88,7 +88,7 @@ jobs:
           - os: macos-latest
             artifact_ext: mac
             PluginVal: ./pluginval.app/Contents/MacOS/pluginval --strictness-level 10 --block-sizes 44100,48000,88200,96000,176400,192000 --skip-gui-tests --validate-in-process --validate
-            AuVal: auval -vt aufx TZhe # change mfg tag and plugin type accordingly
+            AuVal: auval -vt aufx {{ secrets.MFR_ID }} # change mfg tag and plugin type accordingly
           - os: windows-latest
             PluginVal: .\pluginval.exe --strictness-level 10 --block-sizes 44100,48000,88200,96000,176400,192000 --skip-gui-tests --validate-in-process --validate
             artifact_ext: win
