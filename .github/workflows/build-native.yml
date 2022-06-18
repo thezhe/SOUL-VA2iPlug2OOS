@@ -88,7 +88,7 @@ jobs:
           - os: macos-latest
             artifact_ext: mac
             PluginVal: ./pluginval.app/Contents/MacOS/pluginval --strictness-level 10 --block-sizes 44100,48000,88200,96000,176400,192000 --skip-gui-tests --validate-in-process --validate
-            AuVal: auval -vt aufx ${{ secrets.MFR_ID }} # change mfg tag and plugin type accordingly
+            AuVal: auval -vt aufx 
           - os: windows-latest
             artifact_ext: win
             PluginVal: .\pluginval.exe --strictness-level 10 --block-sizes 44100,48000,88200,96000,176400,192000 --skip-gui-tests --validate-in-process --validate
@@ -98,13 +98,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: ${{env.PROJECT_NAME}}-${{matrix.artifact_ext}}
-
-      - name: Unzip files (macOS)
-        if: matrix.os == 'macos-latest'
-        run: |
-          ls
-    # unzip *-${{matrix.artifact_ext}}.zip
-        shell: bash
 
       - name: Pluginval and auval (macOS)
         if: matrix.os == 'macos-latest'
@@ -117,12 +110,12 @@ jobs:
           mv Default/${{env.PROJECT_NAME}}.component ~/Library/Audio/Plug-Ins/Components
           pgrep -x AudioComponentRegistrar >/dev/null && killall -9 AudioComponentRegistrar; echo "killed AudioComponentRegistrar" || echo "AudioComponentRegistrar Process not found"
           ${{matrix.PluginVal}} ~/Library/Audio/Plug-Ins/Components/${{env.PROJECT_NAME}}.component || exit 1
-          ${{matrix.AuVal}} || exit 1
+          ${{matrix.AuVal}} ${{ secrets.MFR_ID }} || exit 1
           sudo rm -rf ~/Library/Audio/Plug-Ins/Components/${{env.PROJECT_NAME}}.component
           mv Compatible/${{env.PROJECT_NAME}}.component ~/Library/Audio/Plug-Ins/Components
           pgrep -x AudioComponentRegistrar >/dev/null && killall -9 AudioComponentRegistrar; echo "killed AudioComponentRegistrar" || echo "AudioComponentRegistrar Process not found"
           ${{matrix.PluginVal}} ~/Library/Audio/Plug-Ins/Components/${{env.PROJECT_NAME}}.component || exit 1
-          ${{matrix.AuVal}} || exit 1
+          ${{matrix.AuVal}} ${{ secrets.MFR_ID }} || exit 1
         shell: bash
 
       - name: Pluginval (Windows)
