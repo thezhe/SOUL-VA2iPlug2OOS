@@ -62,7 +62,7 @@ jobs:
 
     - name: Add msbuild to PATH (Windows)
       if: matrix.os == 'windows-latest'
-      uses: microsoft/setup-msbuild@v1.0.2
+      uses: microsoft/setup-msbuild@v1.1
 
     - name: Build Windows
       if: matrix.os == 'windows-latest'
@@ -90,9 +90,9 @@ jobs:
             PluginVal: ./pluginval.app/Contents/MacOS/pluginval --strictness-level 10 --block-sizes 44100,48000,88200,96000,176400,192000 --skip-gui-tests --validate-in-process --validate
             AuVal: auval -vt aufx {{ secrets.MFR_ID }} # change mfg tag and plugin type accordingly
           - os: windows-latest
-            PluginVal: .\pluginval.exe --strictness-level 10 --block-sizes 44100,48000,88200,96000,176400,192000 --skip-gui-tests --validate-in-process --validate
             artifact_ext: win
-
+            PluginVal: .\pluginval.exe --strictness-level 10 --block-sizes 44100,48000,88200,96000,176400,192000 --skip-gui-tests --validate-in-process --validate
+            
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v2
@@ -101,7 +101,8 @@ jobs:
 
       - name: Unzip files
         run: |
-          unzip *-${{matrix.artifact_ext}}.zip
+          ls
+          unzip ${{env.PROJECT_NAME}}-${{matrix.artifact_ext}}.zip
         shell: bash
 
       - name: Pluginval and auval (macOS)
