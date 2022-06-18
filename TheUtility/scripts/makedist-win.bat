@@ -26,7 +26,7 @@ if %errorlevel% neq 0 exit /b %errorlevel%
 set VERSION=%VERSION:~26,-1%
 if %errorlevel% neq 0 exit /b %errorlevel%
 
-set BUILDDIR="build-win\out\TheUtility-%VERSION%-win"
+set BUILDDIR="build-win\out"
 
 if exist %BUILDDIR% rmdir %BUILDDIR% /s /q > nul
 mkdir %BUILDDIR%

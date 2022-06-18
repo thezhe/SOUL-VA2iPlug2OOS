@@ -228,19 +228,12 @@ xcrun stapler staple $BUILDDIR/zip/Default/$PLUG_NAME.vst3
 xcrun stapler staple $BUILDDIR/zip/Compatible/$PLUG_NAME.component            
 xcrun stapler staple $BUILDDIR/zip/Compatible/$PLUG_NAME.vst3            
 
-rm -R $BUILDDIR/$ARCHIVE_NAME.zip
-
-echo "moving $BUILDDIR/zip contents to $BUILDDIR/$ARCHIVE_NAME.zip"
-echo ""
-
-ditto -c -k $BUILDDIR/zip $BUILDDIR/$ARCHIVE_NAME.zip
-rm -R $BUILDDIR/zip
-
-echo "moving ./$BUILDDIR/*.zip to ./$BUILDDIR/out"
+echo "moving $BUILDDIR/zip contents to $BUILDDIR/out"
 echo ""
 
 mkdir -p ./$BUILDDIR/out
-mv ./$BUILDDIR/*.zip ./$BUILDDIR/out
+mv ./$BUILDDIR/zip/* ./$BUILDDIR/out
+rm -R $BUILDDIR/zip
 
 echo "DONE!"
 echo ""

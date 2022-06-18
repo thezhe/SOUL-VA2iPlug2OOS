@@ -99,10 +99,11 @@ jobs:
         with:
           name: ${{env.PROJECT_NAME}}-${{matrix.artifact_ext}}
 
-      - name: Unzip files
+      - name: Unzip files (macOS)
+        if: matrix.os == 'macos-latest'
         run: |
           ls
-          unzip ${{env.PROJECT_NAME}}-${{matrix.artifact_ext}}.zip
+    # unzip *-${{matrix.artifact_ext}}.zip
         shell: bash
 
       - name: Pluginval and auval (macOS)
